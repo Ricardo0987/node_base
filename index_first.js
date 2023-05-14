@@ -15,3 +15,5 @@ console.log(
     whitespaceBreak: true,
   })
 );
+
+console.log(process.env.VAR3_common);
