@@ -18,5 +18,6 @@ console.log(
 
 const newObj = { a: 22, b: "nuevo objeto definido in exec", c: true };
 
-process.env.VAR3_common = JSON.stringify(newObj);
+// process.env.VAR3_common = JSON.stringify(newObj);
+process.env.VAR3_common = 'NEW TEXT'
 console.log("VAR3_common:", process.env.VAR3_common);
