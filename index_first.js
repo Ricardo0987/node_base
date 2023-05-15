@@ -17,7 +17,19 @@ console.log(
 );
 
 const newObj = { a: 22, b: "nuevo objeto definido in exec", c: true };
+const fs = require("fs");
 
-// process.env.VAR3_common = JSON.stringify(newObj);
-process.env.VAR3_common = 'NEW TEXT'
-console.log("VAR3_common:", process.env.VAR3_common);
+if (process.env.ENV_PATH_TOCHANGE.length > 0) {
+  fs.appendFile(
+    process.env.ENV_PATH_TOCHANGE,
+    `\r\nDATA_RECEIVED='${JSON.stringify(newObj)}'`,
+    function (err) {
+      if (err) throw err;
+      console.log("Saved!");
+    }
+  );
+}
+
+/* 
+ENV_PATH_TOCHANGE="../node_base2/.env" node index_first.js
+*/

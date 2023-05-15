@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dotenv": "^16.0.3",
-    "figlet": "^1.6.0"
+    "figlet": "^1.6.0",
+    "json-store": "^1.0.0"
   }
 }
