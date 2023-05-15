@@ -1,6 +1,8 @@
 const newObj = { a: 22, b: "nuevo objeto definido in exec", c: true };
 const fs = require("fs");
 
+console.log(process.env.ENV_PATH_TOCHANGE);
+
 if (process.env.ENV_PATH_TOCHANGE) {
   fs.appendFile(
     process.env.ENV_PATH_TOCHANGE,
